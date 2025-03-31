@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Form Submission</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+        }
+        .header h1 {
+            margin: 10px 0 0;
+            font-size: 28px;
+        }
+        .content {
+            padding: 20px;
+            color: #333;
+        }
+        .content p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www.svgrepo.com/show/247531/recycle-trash.svg" alt="Pmart Logo">
+            <h1>New Contact Form Submission</h1>
+        </div>
+        <div class="content">
+            <p>You have received a new contact form submission:</p>
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Subject:</strong> {{ subject }}</p>
+            <p><strong>Message:</strong></p>
+            <p>{{ message }}</p>
+        </div>
+        <div class="footer">
+            <p>Follow us:</p>
+            <a href="https://mrphilip.pythonanywhere.com/" target="_blank">Website</a> |
+            <a href="https://linkedin.com/in/philiptitus" target="_blank">LinkedIn</a>
+            <p>&copy; 2025 PhilipTitus. All rights reserved. Pmart.</p>
+        </div>
+    </div>
+</body>
+</html>

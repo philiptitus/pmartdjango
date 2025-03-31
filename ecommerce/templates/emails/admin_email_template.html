@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Order Notification</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+        }
+        .header h1 {
+            margin: 10px 0 0;
+            font-size: 28px;
+        }
+        .content {
+            padding: 20px;
+            color: #333;
+        }
+        .content p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .content ul {
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin: 5px 0;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www.svgrepo.com/show/247531/recycle-trash.svg" alt="Pmart Logo">
+            <h1>New Order Received</h1>
+        </div>
+        <div class="content">
+            <p>A new order has been received:</p>
+            <p><strong>Customer Name:</strong> {{ customer_name }}</p>
+            <p><strong>Customer Email:</strong> {{ customer_email }}</p>
+            <p><strong>Platform:</strong> {{ platform }}</p>
+            <p><strong>Total Amount:</strong> ${{ total_amount }}</p>
+            <p><strong>Items:</strong></p>
+            <ul>
+                {% for item in items %}
+                <li>{{ item.name }} (Quantity: {{ item.quantity }})</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer">
+            <p>Follow me:</p>
+            <a href="https://mrphilip.pythonanywhere.com/" target="_blank">Website</a> |
+            <a href="https://linkedin.com/in/philiptitus" target="_blank">LinkedIn</a>
+            <p>&copy; 2025 PhilipTitus. All rights reserved. Pmart.</p>
+        </div>
+    </div>
+</body>
+</html>
