@@ -1,6 +1,6 @@
 # PMart Backend
 
-This is the backend service for PMart, an e-commerce platform that i made to sell my tech services as  freelance. It is built with Django and Django REST Framework.
+This is the backend service for PMart, an e-commerce platform that i made to sell my tech services as  freelance. It is built with Django and Django REST Framework. The frontend of this project is built on NextJs.
 
 ## Tech Stack
 
